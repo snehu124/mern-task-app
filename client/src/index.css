@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities; */
 
-/* Reset and Base Styles */
 html,
 body {
   margin: 0;
@@ -10,7 +9,6 @@ body {
   height: 100%;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
-  /* Subtle gradient background */
   color: #1f2937;
 }
 
@@ -20,37 +18,29 @@ h1 {
   text-align: center;
 }
 
-/* Form Container Styles (Updated to Match CSS 2) */
 .form-container {
   position: absolute;
   z-index: 2;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   padding: 40px;
-  /* Updated from 8px to 40px */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 600px;
-  /* Updated from 631px to 600px */
   text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* Base transform for centering */
   backdrop-filter: blur(12px);
-  /* Frosted glass effect */
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect (Combine with Base Transform) */
 .form-container:hover {
   transform: translate(-50%, -50%) translateY(-5px);
-  /* Combine centering with hover effect */
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Task Card (Glassmorphism with Priority Colors) */
 .task-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
@@ -67,29 +57,21 @@ h1 {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* Priority Colors for Task Cards */
 .priority-high {
   background: rgba(254, 226, 226, 0.3);
-  /* Light red */
   border-left: 4px solid #f87171;
-  /* Vibrant red accent */
 }
 
 .priority-medium {
   background: rgba(254, 243, 199, 0.3);
-  /* Light yellow */
   border-left: 4px solid #facc15;
-  /* Vibrant yellow accent */
 }
 
 .priority-low {
   background: rgba(220, 252, 231, 0.3);
-  /* Light green */
   border-left: 4px solid #4ade80;
-  /* Vibrant green accent */
 }
 
-/* Form Inputs */
 .form-input {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -102,19 +84,16 @@ h1 {
 
 .form-input:focus {
   border-color: #3b82f6;
-  /* Blue focus ring */
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
   background: #fff;
 }
 
-/* Error Message */
 .error-message {
   animation: fadeIn 0.3s ease-in-out;
   background: rgba(254, 226, 226, 0.8);
   border-radius: 8px;
   padding: 0.5rem 1rem;
   color: #dc2626;
-  /* Red text */
 }
 
 @keyframes fadeIn {
@@ -129,10 +108,8 @@ h1 {
   }
 }
 
-/* Buttons with Gradient and Animation */
 .form-button {
   background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
-  /* Blue gradient */
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
   color: #fff;
@@ -148,10 +125,8 @@ h1 {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Specific Button Variants */
 .form-button.red {
   background: linear-gradient(90deg, #ef4444 0%, #f87171 100%);
-  /* Red gradient */
   margin-left: 82%;
 }
 
@@ -161,7 +136,6 @@ h1 {
 
 .form-button.gray {
   background: linear-gradient(90deg, #6b7280 0%, #9ca3af 100%);
-  /* Gray gradient */
 }
 
 .form-button.gray:hover {
@@ -170,7 +144,6 @@ h1 {
 
 .form-button.red.forming {
   background: linear-gradient(90deg, #ef4444 0%, #f87171 100%);
-  /* Red gradient */
   margin-left: 70%;
 }
 
@@ -178,8 +151,6 @@ h1 {
   background: linear-gradient(90deg, #dc2626 0%, #ef4444 100%);
 }
 
-
-/* Task List Action Links */
 .action-link {
   transition: color 0.2s ease, transform 0.2s ease;
 }
@@ -188,7 +159,6 @@ h1 {
   transform: translateY(-1px);
 }
 
-/* Pagination Buttons */
 .pagination-button {
   background: linear-gradient(90deg, #6b7280 0%, #9ca3af 100%);
   border-radius: 8px;
@@ -247,28 +217,27 @@ h1 {
 .back-button-container .form-button {
   width: 141px;
   position: relative;
-    top: -47px;
-    left: 14px;
+  top: -47px;
+  left: 14px;
 }
 
 .form-container-formatting {
-     position: fixed;
+  position: fixed;
   z-index: 2;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   padding: 40px;
-  /* Updated from 8px to 40px */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 600px;
-    text-align: center;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 17%;
-    /* margin-bottom: 8%; */
-    /* height: 100%; */
+  text-align: center;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 17%;
+  /* margin-bottom: 8%; */
+  /* height: 100%; */
 }

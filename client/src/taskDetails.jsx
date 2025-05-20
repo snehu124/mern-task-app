@@ -73,13 +73,13 @@ const TaskDetails = () => {
             <strong className="text-gray-900">Due Date:</strong> {new Date(task.dueDate).toLocaleDateString()}
           </p>
           <p className="text-gray-700 mb-2">
-            <strong className="text-gray-900">Status: </strong> 
+            <strong className="text-gray-900">Status: </strong>
             <span className={`ml-2 px-2 py-1 rounded-full text-sm ${task.status === 'completed' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}`}>
               {task.status}
             </span>
           </p>
           <p className="text-gray-700 mb-2">
-            <strong className="text-gray-900">Priority: </strong> 
+            <strong className="text-gray-900">Priority: </strong>
             <span className={`ml-2 px-2 py-1 rounded-full text-sm ${priorityStyles[task.priority].includes('high') ? 'bg-red-100 text-red-800' : priorityStyles[task.priority].includes('medium') ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800'}`}>
               {task.priority}
             </span>
@@ -88,19 +88,19 @@ const TaskDetails = () => {
             <strong className="text-gray-900">Created At:</strong> {new Date(task.createdAt).toLocaleString()}
           </p>
           <div className="edit-delete-buttons">
-  <Link to={`/tasks/edit/${task._id}`} className="form-button blue">
-    Edit
-  </Link>
-  <button onClick={handleDelete} className="form-button red forming">
-    Delete
-  </button>
-</div>
+            <Link to={`/tasks/edit/${task._id}`} className="form-button blue">
+              Edit
+            </Link>
+            <button onClick={handleDelete} className="form-button red forming">
+              Delete
+            </button>
+          </div>
 
-<div className="back-button-container">
-  <button onClick={() => navigate('/tasks')} className="form-button gray">
-    Back to Tasks
-  </button>
-</div>
+          <div className="back-button-container">
+            <button onClick={() => navigate('/tasks')} className="form-button gray">
+              Back to Tasks
+            </button>
+          </div>
 
         </div>
       </div>

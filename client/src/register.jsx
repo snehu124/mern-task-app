@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-// Simple email regex for validation
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const Register = () => {
@@ -10,7 +9,6 @@ const Register = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  // Frontend validation function
   const validate = () => {
     if (!user.name.trim()) return 'Name is required';
     if (!user.email.trim()) return 'Email is required';
@@ -38,7 +36,7 @@ const Register = () => {
   };
 
   return (
-   <div className="chat-form min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="chat-form min-h-screen flex items-center justify-center bg-gray-100">
       <div className="form-container max-w-md w-full">
         <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">Register</h1>
         {error && (
@@ -75,11 +73,11 @@ const Register = () => {
               required
               minLength={6}
             />
-          </div> <br /> 
+          </div> <br />
           <button
             type="submit"
             className="form-button w-full bg-blue-500 text-white px-4 py-3 rounded-lg hover:bg-blue-600 transition shadow-md"
-          > 
+          >
             Register
           </button>
         </form>
